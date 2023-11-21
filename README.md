@@ -3,7 +3,7 @@
 This is the calculator I created for the first project in SEV-12 Nebula Academy Software Engineering Bootcamp. I made a simple calculator that does basic math such as Addition, Subtraction,  Multiplication, and Division.
 
 ## Wireframe
-https://whimsical.com/QNVb4bSJFScvPCJSywvUnN
+https://whimsical.com/calculator-wireframe2-6zEh3rBnP97qij16qXpX3H
 ## Features
 
 ### MVP (Minimum Viable Product)
@@ -20,6 +20,9 @@ https://whimsical.com/QNVb4bSJFScvPCJSywvUnN
 
 
 ### PMVP (Post Minimum Viable Product)
+
+- [ ] Clear Button
+- [ ] (00) Button
 
 
 
