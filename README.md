@@ -25,11 +25,6 @@ https://whimsical.com/calculator-wireframe2-6zEh3rBnP97qij16qXpX3H
 - [ ] (00) Button
 
 
-
-## Installation
-
-<!-- No Installation Required -->
-
 ## Usage
 
 Open `index.html`
