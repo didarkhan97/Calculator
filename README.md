@@ -1,6 +1,6 @@
 # DK Calculator Project
 
-This is the calculator I created for the first project in SEV-12 Nebula Academy Software Engineering Bootcamp. I made a simple calculator that does basic math such as Addition, Subtraction,  Multiplication, and Division.
+This is the calculator I created for the first project in SEV-12 Nebula Academy Software Engineering Bootcamp. I made a simple calculator that does basic math such as Addition, Subtraction,  Multiplication, and Division. I also added a button to clear out all inputs and a 00 button to write out the bigger numbers faster. 
 
 ## Wireframe
 https://whimsical.com/calculator-wireframe2-6zEh3rBnP97qij16qXpX3H
