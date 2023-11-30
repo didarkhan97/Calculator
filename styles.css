@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.calculator{
+    width: 400px;
+    height: 500px;
+    border: solid black;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-color: plum;
+      
+  }
+
+  .display{
+    width: 350px;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    border: solid black;
+    background-color: lightgrey;
+   
+  }
+
+.keys{
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.key{
+    width: 100px;
+    height: 30px;
+    
+  }
+
