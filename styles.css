@@ -1,6 +1,9 @@
 body{
+    width: 100%;
+    height: 100vh;
     background-color: white;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -9,8 +12,9 @@ body{
     height: 500px;
     border: solid black;
     display: flex;
-    align-self: center;
+    align-items: center;
     flex-direction: column;
+    justify-content:center;
     background-color: plum;
       
   }
@@ -18,8 +22,11 @@ body{
   .display{
     width: 350px;
     height: 100px;
+    font-size: 50px;
+    text-wrap: wrap;
     margin: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     border: solid black;
     background-color: lightgrey;
@@ -27,16 +34,23 @@ body{
   }
 
 .keys{
-    height: 300px;
+    height: 350px;
     width: 350px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+
     
+
 }
 
 .key{
+    font-size: 20px;
     width: 100px;
     height: 30px;
-    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 

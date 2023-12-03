@@ -8,26 +8,39 @@
 <body>
 
 <div class="calculator">
-    <input type="text" class="display" id="display" disabled>
+    <div class="display">
+      <p class="output"></p>
+    </div>
     <div class="keys">
-        <button class="key" id="clearButton" onclick="clearDisplay()">C</button>
-        <button class="key" onclick="addOperator('÷')">÷</button>
-        <button class="key" onclick="addOperator('x')">x</button><br>
-        <button class="key" onclick="appendToDisplay('7')">7</button>
-        <button class="key" onclick="appendToDisplay('8')">8</button>
-        <button class="key" onclick="appendToDisplay('9')">9</button>
-        <button class="key" onclick="addOperator('-')">-</button>
-        <button class="key" onclick="appendToDisplay('4')">4</button>
-        <button class="key" onclick="appendToDisplay('5')">5</button>
-        <button class="key" onclick="appendToDisplay('6')">6</button>
-        <button class="key" onclick="addOperator('+')">+</button>
-        <button class="key" onclick="appendToDisplay('1')">1</button>
-        <button class="key" onclick="appendToDisplay('2')">2</button>
-        <button class="key" onclick="appendToDisplay('3')">3</button><br>
-        <button class="key" onclick="appendToDisplay('0')">0</button>
-        <button class="key" onclick="appendToDisplay('00')">00</button>
-        <button class="key" onclick="addOperator('.')">.</button>
-        <button class="key" id="equalButton" onclick="calculate()">=</button>
+        <div class="firstRow">
+        <button class="clear" id="clearButton">C</button>
+        <button class="operator" id="division">÷</button>
+        <button class="operator" id="multiplication">x</button>
+        </div>
+        <div class="secondRow">
+        <button class="number" value="7">7</button>
+        <button class="number" value="8">8</button>
+        <button class="number" value="9">9</button>
+        <button class="operator" id="subtraction">-</button>
+      </div>
+      <div class="thirdRow">
+        <button class="number" value="4">4</button>
+        <button class="number" value="5">5</button>
+        <button class="number" value="6">6</button>
+      </div>
+      <div class="fourthRow">
+        <button class="operator" id="addition">+</button>
+        <button class="number" value="1">1</button>
+        <button class="number" value="2">2</button>
+        <button class="number" value="3">3</button>
+      </div>
+      <div class="fifthRow">
+        <button class="number" value="0">0</button>
+        <button class="number" value="00">00</button>
+        <button class="number" id="dot">.</button>
+        <button class="calculate" id="equalButton">=</button>
+      </div>
+      </div>
     </div>
 </div>
 
