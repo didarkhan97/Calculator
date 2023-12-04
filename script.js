@@ -47,7 +47,7 @@
 // First Part ('DOMContentLoaded' function) - Grabbing Display Element and Setting Initial values for Calculator display. This first  EventListener initiates the other EventListners and their functions to work with the display outputs. (line 3)
 
 document.addEventListener('DOMContentLoaded', function() {
-    const output = document.querySelector('.output');
+    const output = document.querySelector('.display');
     // This is the initial state of the calculator. 
     let currentInput = '0'; // Initial Value on display is set to 0
     let operator = null; 
