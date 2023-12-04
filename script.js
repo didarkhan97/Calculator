@@ -20,9 +20,14 @@
 
 // 1. updateOutput() - Output for the display. Everytime this function is used the display gets updated. When input changes this function updates calculator display. (see lines 66,95,112) for this being used after the function is created. (function on line 56)
 
-// 2. handleNumberClick(value) - Input when a number is clicked (line 60)
 
-// 3. handleOperatorClick(op) - Defines Operators Selected (line 69)
+// 2. handleNumberClick(value) - Input when a number is clicked 
+
+//LOGIC OF FUNCTION: Allows for values from HTML to be used in calculator. This along with the eventlistener that is attached to the classes of 'numbers' in the HTML file allows for buttons to be clicked. The eventListner attaches the function created for value. 
+
+// 3. handleOperatorClick(op) - Defines Operators Selected 
+
+// LOGIC OF FUNCTION: 
 
 // 4. performCalculation() - Defining each operation (+ , - , * , /) This connects to the 3rd function. (line 81)
 
@@ -49,9 +54,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const output = document.querySelector('.display');
     // This is the initial state of the calculator. 
-    let currentInput = '0'; // Initial Value on display is set to 0
+    let currentInput = '0'; // Initial Value is set to 0
     let operator = null; 
-    let previousInput = null;
+    let previousInput = null; 
   
     function updateOutput() {
       output.textContent = currentInput; //(See line 13 for .textContent)
