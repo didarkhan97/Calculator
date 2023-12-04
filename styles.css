@@ -8,6 +8,8 @@
 
 
 
+
+
 .calculator {
   background: #e3cff3;
   border: 2px solid black;
@@ -26,6 +28,9 @@
   font-size: 50px;
   margin-bottom: 15px;
   height: 30%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -48,6 +53,11 @@ button {
   justify-content: center;
 }
 
+.rowfour {
+  width: 93px;
+  padding: 20px;
+}
+
 
 #clearButton {
   background: orange;
@@ -59,7 +69,6 @@ button {
 #equalButton{
   background: lightblue;
   border: 1px solid blue;
-
 }
 
 #division{
@@ -67,6 +76,17 @@ button {
   display: flex;
   justify-content: center;
 }
+
+#addition{
+  position: absolute;
+  height: 150px;
+  width: 93px;
+  left: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 

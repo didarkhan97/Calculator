@@ -2,23 +2,23 @@
 
 // NOTES FOR MYSELF - Table of Content
 
-// 'DOMContentLoaded' - The event is for all content to be loaded and function is to grab the output display and create initial variables for display. Allows code to run immediately after initial HTML structure is loaded. This allows all other elements below to be manipulated. Prevents errors and does not run prematurely. Also does not need stylesheets to be present to function. (line 49). 
+// 'DOMContentLoaded' - The event is for all content to be loaded and function is to grab the output display and create initial variables for display. Allows code to run immediately after initial HTML structure is loaded. This allows all other elements below to be manipulated. Prevents errors and does not run prematurely. Also does not need stylesheets to be present to function.
 
-// First Part - Initializing Variables and Creating a updateOutput() function. Used in later parts of the code to change and manipulate the calculator.(See lines 49-58). 
+// First Part - Initializing Variables and Creating a updateOutput() function. Used in later parts of the code to change and manipulate the calculator. 
 
-// querySelector = This is how to grab elements from HTML and Manipulate and Change in JavaScript. (See lines 50,118,129)
+// querySelector = This is how to grab elements from HTML and Manipulate and Change in JavaScript. 
 
-// null = Is used as a default value - Calculator set with initial values of 'null' so later on when functions are created and clicked, calculator can display Arithmetic Operations (Number input, Operation input, and Calculation Output). (See lines 53,54,70,100,103,104,110,111)
+// null = Is used as a default value - Calculator set with initial values of 'null' so later on when functions are created and clicked, calculator can display Arithmetic Operations (Number input, Operation input, and Calculation Output).
 
-// .textContent - Treats content as plaintext. Includes all text content. Accurate in displaying text content. It is dynamic and visually appealing. 
+// .innerText - Inserting Text/Numbers in the display. Works because of the function made for updating display when operating on calculator.
 
-// parseFloat() (data type manipulation) - converts strings to numbers in the calculator. This allows accuracy in the Arithmetic calculations in the calculator. At the first part currentInput is set to the string of '0'. parseFloat() will change to accurate numbers for calculator. (See lines 82,83)
+// parseFloat() (data type manipulation) - converts strings to numbers in the calculator. This allows accuracy in the Arithmetic calculations in the calculator. At the first part currentInput is set to the string of '0'. parseFloat() will change to accurate numbers for calculator. (See lines 88,89)
 
 // --------------------------- FUNCTIONS -------------------------------
 
 // CREATING RULES/DEFINITIONS/UNDERSTANDING FOR THE CALCULATOR TO FUNCTION FOR EACH BUTTON THAT IS CLICKED. (See lines 49-113)
 
-// 1. updateOutput() - Output for the display. Everytime this function is used the display gets updated. When input changes this function updates calculator display. (see lines 66,95,112) for this being used after the function is created. (function on line 56)
+// 1. updateOutput() - Output for the display. Everytime this function is used the display gets updated. When input changes this function updates calculator display (see lines 72,101,118) for this being used after the function is created. (function on line 62)
 
 
 // 2. handleNumberClick(value) - Input when a number is clicked 
@@ -37,9 +37,9 @@
 
 // ------------------------- EVENT LISTENERS --------------------------- 
 
-// CONNECTING BUTTONS WITH FUNCTIONS THAT WORK WHEN 'CLICKED' ON. (See lines 115-143)
+// CONNECTING BUTTONS WITH FUNCTIONS THAT WORK WHEN 'CLICKED' ON. 
 
-// 1. handleNumberClick - Number Button (Function created in *line 31* , Button Clickability (handleNumberClick EventListner) (line 117 )
+// 1. handleNumberClick - Number Button/Button Clickability (handleNumberClick EventListner) 
 
 // 2. handleOperatorClick - Operator Button (Function for Operator (line 69) , Button Clickability (handleOperatorClick EventListner) (line 127)
 
@@ -51,15 +51,16 @@
 
 // First Part ('DOMContentLoaded' function) - Grabbing Display Element and Setting Initial values for Calculator display. This first  EventListener initiates the other EventListners and their functions to work with the display outputs. (line 3)
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const output = document.querySelector('.display');
-    // This is the initial state of the calculator. 
+    // This is the initial state of the calculator.  
     let currentInput = '0'; // Initial Value is set to 0
-    let operator = null; 
-    let previousInput = null; 
+    let operator = null;   // refer to line 11 to understand the use of null here
+    let previousInput = null;  // refer to line 11 to understand the use of null here
   
-    function updateOutput() {
-      output.textContent = currentInput; //(See line 13 for .textContent)
+    function updateOutput() { 
+      output.innerText = currentInput;
     }
   
     function handleNumberClick(value) {
@@ -100,26 +101,29 @@ document.addEventListener('DOMContentLoaded', function() {
       updateOutput();
     }
     
-    // Equal Button Operates based on the Functionality (line 81) of the Operators (Addition, Subtraction, Multiplication, Division).
+    // Equal Button Function Operates based on the Functionality/Rules (line 86) of the Operators (Addition, Subtraction, Multiplication, Division).
     function handleEqualClick() {
       if (operator !== null) {
-        // Function is in *line 81*
+        // Function is in *line 86*
         performCalculation();
-        operator = null;
+        operator = null; // 
         previousInput = null;
       }
     }
-  
+    
+
+    // This function basically erases the uses of past operators and numbers
     function clearCalculator() {
       currentInput = '0';
-      operator = null;
-      previousInput = null;
-      updateOutput();
+      operator = null; // refer to line 11 to understand the use of null here
+      previousInput = null; // refer to line 11 to understand the use of null here
+      updateOutput(); 
     }
     
+
     // EVENT LISTENERS - NUMBER BUTTON , OPERATOR BUTTON, EQUAL BUTTON, CLEAR BUTTON
 
-    // Event listener for number buttons
+    // Event listener for number buttons - function on line 65
     const numberButtons = document.querySelectorAll('.number');
     numberButtons.forEach(button => {
       button.addEventListener('click', function() {
@@ -127,26 +131,28 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // Event listener for operator buttons
+    // Event listener for operator buttons - function on line 74
 
-    // document.querySelectorAll('.operator') grabs the classes of operators(+ , - . * , /) that is in the HTML. Then each one of those buttons are given the functionality of the operators that was defined in the functions created above in (line 69 to line 96) . After That The funtionality has to be connected to the Clickability. This is all because I have the operators defined as classes in the HTML therefore it had to be manipulated in JS. 
+    // document.querySelectorAll('.operator') grabs the classes of operators(+ , - . * , /) that is in the HTML. Then each one of those buttons are given the functionality of the operators that was defined in the functions created above in (line 75 to line 102) . After That The funtionality has to be connected to the Clickability. This is all because I have the operators defined as classes in the HTML therefore it had to be manipulated in JS. 
 
     const operatorButtons = document.querySelectorAll('.operator');
     operatorButtons.forEach(button => {
       button.addEventListener('click', function() {
-        handleOperatorClick(button.textContent);
+        handleOperatorClick(button.innerText);
       });
     });
   
-    // Event listener for equal button
+    // Event listener for equal button - function on line 104
     document.getElementById('equalButton').addEventListener('click', handleEqualClick);
   
-    // Event listener for clear button
+    // Event listener for clear button - function on line 114
     document.getElementById('clearButton').addEventListener('click', clearCalculator);
   });
   
 
 // -----------------------  END OF CALCULATOR  --------------------------
+
+
 
 
 // ------------------------   SCRAP WORK   ------------------------------
@@ -158,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // // Functions
-// // .forEach brings over every button. after doing that we created an event using .addEventListner and putting click event. Then begin the function using Arrow function method. 
+// // .forEach brings over every button. after doing that I created an event using .addEventListner and putting click event. Then begin the function using Arrow function method. This now connects the function and allows it to work when clicked on.
 // buttons.forEach(button => {
 //     button.addEventListener("click", (event) => {
 //         displayOutput.innerText = button.value
