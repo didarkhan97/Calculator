@@ -7,7 +7,7 @@ https://whimsical.com/calculator-wireframe2-6zEh3rBnP97qij16qXpX3H
 ## Features
 
 ### MVP (Minimum Viable Product)
-- [X] Post to a Public Repo
+- [x] Post to a Public Repo
 - [x] Functions
   - [x] Add
   - [x] Subtract
