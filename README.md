@@ -7,22 +7,22 @@ https://whimsical.com/calculator-wireframe2-6zEh3rBnP97qij16qXpX3H
 ## Features
 
 ### MVP (Minimum Viable Product)
-- [ ] Post to a Public Repo
-- [ ] Functions
-  - [ ] Add
-  - [ ] Subtract
-  - [ ] Multiply
-  - [ ] Divide
+- [x] Post to a Public Repo
+- [x] Functions
+  - [x] Add
+  - [x] Subtract
+  - [x] Multiply
+  - [x] Divide
 - [ ] Styling
-  - [ ] Flexbox
+  - [x] Flexbox
   - [ ] OR
   - [ ] Grid
 
 
 ### PMVP (Post Minimum Viable Product)
 
-- [ ] Clear Button
-- [ ] (00) Button
+- [x] Clear Button
+- [x] (00) Button
 
 
 ## Usage

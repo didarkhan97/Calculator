@@ -53,8 +53,8 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const output = document.querySelector('.display');
-    // This is the initial state of the calculator.  
+    const output = document.querySelector('.display'); 
+    // This is the initial state of the calculator and the display.  
     let currentInput = '0'; // Initial Value is set to 0
     let operator = null;   // refer to line 11 to understand the use of null here
     let previousInput = null;  // refer to line 11 to understand the use of null here
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
       output.innerText = currentInput;
     }
   
-    function handleNumberClick(value) {
+    function handleNumberClick(value) {   // go to line 131 to see eventListener
       if (currentInput === '0' && value !== '00') {
         currentInput = value;
       } else {
@@ -71,20 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       updateOutput();
     }
-  
-    function handleOperatorClick(op) {
-      if (operator !== null) {
-        performCalculation();
-      }
-      operator = op;
-      previousInput = currentInput;
-      currentInput = '0';
-    }
-    
+
     // Each Operations (+ , - , * , /) Function is defined here. This connects with handleOperatorClick function.
 
     // parseFloat() - refer to (line 15) for understanding
-    function performCalculation() {
+
+    function performCalculation() {  // go to line 145 for eventListener
       const prev = parseFloat(previousInput);
       const current = parseFloat(currentInput);
   
@@ -100,9 +92,22 @@ document.addEventListener('DOMContentLoaded', function() {
   
       updateOutput();
     }
+  
+    function handleOperatorClick(op) { // go to line 139 to see eventListener
+      if (operator !== null) {
+        performCalculation();
+      }
+      operator = op;
+      previousInput = currentInput;
+      currentInput = '0';
+    }
     
+    
+    
+    //This connects with handleOperatorClick function.
+
     // Equal Button Function Operates based on the Functionality/Rules (line 86) of the Operators (Addition, Subtraction, Multiplication, Division).
-    function handleEqualClick() {
+    function handleEqualClick() { // go to line 150 for eventListener
       if (operator !== null) {
         // Function is in *line 86*
         performCalculation();
@@ -113,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     // This function basically erases the uses of past operators and numbers
-    function clearCalculator() {
+    function clearCalculator() {  // go to line 153 for eventListner
       currentInput = '0';
       operator = null; // refer to line 11 to understand the use of null here
       previousInput = null; // refer to line 11 to understand the use of null here
@@ -131,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // Event listener for operator buttons - function on line 74
+    // Event listener for operator buttons - function on line 96
 
     // document.querySelectorAll('.operator') grabs the classes of operators(+ , - . * , /) that is in the HTML. Then each one of those buttons are given the functionality of the operators that was defined in the functions created above in (line 75 to line 102) . After That The funtionality has to be connected to the Clickability. This is all because I have the operators defined as classes in the HTML therefore it had to be manipulated in JS. 
 
@@ -142,10 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // Event listener for equal button - function on line 104
+    // Event listener for equal button - function on line 109
     document.getElementById('equalButton').addEventListener('click', handleEqualClick);
   
-    // Event listener for clear button - function on line 114
+    // Event listener for clear button - function on line 121
     document.getElementById('clearButton').addEventListener('click', clearCalculator);
   });
   
@@ -157,10 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ------------------------   SCRAP WORK   ------------------------------
 
-// // First we connected all buttons from HTML. 
-// let buttons = document.querySelectorAll('button');
-// let displayOutput = document.querySelector('.output');
-// // let operators = document.getElementsByClassName('operator')
 
 
 // // Functions
